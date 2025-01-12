@@ -19,23 +19,23 @@ cd LiaChat
 
 2. Install dependencies
 bash
-for backend : 
+## for backend : 
 cd Server
 npm install
 
-for frontend :
+## for frontend :
 cd Client
 npm install
 
-for server start : 
+## for server start : 
 cd Server
 npm start
 
-for frontend start : 
+## for frontend start : 
 cd Client
 npm run dev
 
-
+## to chat with lia plese use @Lia or @lia in the message
 
 Socket Events
 join_room: Event triggered when a user joins a room.
