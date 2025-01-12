@@ -1,64 +1,51 @@
-Project Name
-A full-stack real-time web application using React, Express, and Socket.io.
+# Real-Time Chat Application with AI Integration
 
-Project Overview
-This project consists of two main parts:
+This is a real-time chat application where users can send messages in rooms. It includes an AI assistant (`Lia`) that can generate funny and roasting responses to messages. The application is built using **Socket.io**, **Express**, **MongoDB**, and integrates with the **Together AI** service to generate AI responses.
 
-Frontend: A React application built with Vite, utilizing Socket.io-client for real-time communication.
-Backend: An Express-based server that manages API requests and communicates with the frontend using Socket.io.
-Features
-Real-time Communication: Using Socket.io for bidirectional communication between the client and the server.
-ESLint Integration: For maintaining code quality with standard linting rules.
-Vite Development Server: Fast and optimized development experience.
-Docker (optional): For containerizing the application for easier deployment.
-Technologies Used
-Frontend: React, Vite, Socket.io-client
-Backend: Express, Socket.io, Body-Parser, CORS, Dotenv
-Development: ESLint, Vite, Node.js
-Getting Started
-Follow these instructions to get the project up and running locally.
+## Features
 
-Prerequisites
-Ensure you have the following tools installed:
+- Real-time messaging with users in a shared room.
+- Active user management per room.
+- AI-powered responses from "Lia" based on chat history.
+- Typing indicators for active users.
+- Message history retrieval upon joining a room.
 
-Node.js (v18 or higher)
-npm or yarn
-Git
-Setup for Frontend
-Clone the repository:
+## Installation
 
+### 1. Clone the repository
+
+git clone https://github.com/shivamsince0502/LiaChat.git
+cd LiaChat
+
+2. Install dependencies
 bash
-Copy code
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo/client
-Install dependencies:
-
-bash
-Copy code
+for backend : 
+cd Server
 npm install
-Run the development server:
 
-bash
-Copy code
+for frontend :
+cd Client
+npm install
+
+for server start : 
+cd Server
+npm start
+
+for frontend start : 
+cd Client
 npm run dev
 
-Setup for Backend
-Navigate to the backend folder:
 
-bash
-Copy code
-cd ../server
-Install dependencies:
 
-bash
-Copy code
-npm install
-Create a .env file in the root of the server directory and add necessary configurations (e.g., for database or other services).
-
-Run the backend server:
-
-bash
-Copy code
-npm start
-The backend should now be running at http://localhost:3000.
-
+Socket Events
+join_room: Event triggered when a user joins a room.
+send_message: Event triggered when a user sends a message.
+receive_message: Event triggered when a message is received in the room (including AI responses).
+typing: Event triggered when a user starts typing.
+stop_typing: Event triggered when a user stops typing.
+update_active_users: Event triggered to update the list of active users in the room.
+Technologies Used
+Socket.io: For real-time communication between the server and clients.
+Express: For the backend server.
+MongoDB: For storing room data, messages, and active users.
+Together AI API: For generating AI responses in the chat.
